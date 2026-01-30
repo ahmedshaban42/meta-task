@@ -18,6 +18,8 @@ const routerhandellar=(app)=>{
     app.use('/auth-user',authRoterUserController)
     app.use('/task',taskRouterController)
 
+    app.get('/',async(req,res)=>{res.status(200).json({message:"app work done"})})
+
 
 
 

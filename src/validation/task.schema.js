@@ -3,8 +3,6 @@ import Joi from "joi";
 export const createTaskSchema={
     body:Joi.object({
         title: Joi.string()
-        .trim()
-        .escape()
         .required()
         .messages({
             "any.required": "Title is required",
@@ -12,8 +10,6 @@ export const createTaskSchema={
         }),
         description: Joi.string()
         .optional()
-        .trim()
-        .escape()
         .allow('')
         .messages({
             "string.base": "Description must be a string"
@@ -68,10 +64,10 @@ export const updateTaskSchema = {
         id: Joi.number().integer().positive().required()
     }),
     body: Joi.object({
-        title: Joi.string().trim().escape().optional().messages({
+        title: Joi.string().optional().messages({
             'string.base': 'Title must be a string'
         }),
-        description: Joi.string().trim().escape().optional().allow('').messages({
+        description: Joi.string().optional().allow('').messages({
             'string.base': 'Description must be a string'
         }),
         status: Joi.string().valid('PENDING', 'IN_PROGRESS', 'COMPLETED').optional(),
