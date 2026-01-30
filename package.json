@@ -1,0 +1,29 @@
+{
+  "name": "meta-task",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start:dev": "SET NODE_ENV=dev&&nodemon .",
+    "start:prod": "SET NODE_ENV=prod&&nodemon .",
+    "build": "npm i",
+    "start": "node ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.6",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.2.1",
+    "joi": "^18.0.2",
+    "jsonwebtoken": "^9.0.3",
+    "mysql2": "^3.16.2",
+    "nodemailer": "^7.0.13",
+    "sequelize": "^6.37.7",
+    "uuid": "^13.0.0"
+  }
+}
